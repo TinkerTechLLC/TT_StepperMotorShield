@@ -736,66 +736,6 @@ With round pins</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="microbuilder">
-<description>&lt;h2&gt;&lt;b&gt;microBuilder.eu&lt;/b&gt; Eagle Footprint Library&lt;/h2&gt;
-
-&lt;p&gt;Footprints for common components used in our projects and products.  This is the same library that we use internally, and it is regularly updated.  The newest version can always be found at &lt;b&gt;www.microBuilder.eu&lt;/b&gt;.  If you find this library useful, please feel free to purchase something from our online store. Please also note that all holes are optimised for metric drill bits!&lt;/p&gt;
-
-&lt;h3&gt;Obligatory Warning&lt;/h3&gt;
-&lt;p&gt;While it probably goes without saying, there are no guarantees that the footprints or schematic symbols in this library are flawless, and we make no promises of fitness for production, prototyping or any other purpose. These libraries are provided for information puposes only, and are used at your own discretion.  While we make every effort to produce accurate footprints, and many of the items found in this library have be proven in production, we can't make any promises of suitability for a specific purpose. If you do find any errors, though, please feel free to contact us at www.microbuilder.eu to let us know about it so that we can update the library accordingly!&lt;/p&gt;
-
-&lt;h3&gt;License&lt;/h3&gt;
-&lt;p&gt;This work is placed in the public domain, and may be freely used for commercial and non-commercial work with the following conditions:&lt;/p&gt;
-&lt;p&gt;THIS SOFTWARE IS PROVIDED ''AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE INSTITUTE OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-&lt;/p&gt;</description>
-<packages>
-<package name="TERMBLOCK_1X2-3.5MM">
-<wire x1="-3.4" y1="3.4" x2="-3.4" y2="-2.2" width="0.2032" layer="21"/>
-<wire x1="-3.4" y1="-2.2" x2="-3.4" y2="-3.6" width="0.2032" layer="21"/>
-<wire x1="-3.4" y1="-3.6" x2="3.6" y2="-3.6" width="0.2032" layer="21"/>
-<wire x1="3.6" y1="-3.6" x2="3.6" y2="-2.2" width="0.2032" layer="21"/>
-<wire x1="3.6" y1="-2.2" x2="3.6" y2="3.4" width="0.2032" layer="21"/>
-<wire x1="3.6" y1="3.4" x2="-3.4" y2="3.4" width="0.2032" layer="21"/>
-<wire x1="-3.4" y1="-2.2" x2="3.6" y2="-2.2" width="0.2032" layer="21"/>
-<pad name="1" x="1.8" y="0" drill="1" diameter="2.1844"/>
-<pad name="2" x="-1.7" y="0" drill="1" diameter="2.1844"/>
-<text x="-3" y="3.89" size="0.8128" layer="25" ratio="18">&gt;NAME</text>
-<text x="-3.048" y="-3.048" size="0.4064" layer="27" ratio="10">&gt;VALUE</text>
-</package>
-</packages>
-<symbols>
-<symbol name="1X2">
-<wire x1="-2.54" y1="5.08" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="-2.54" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="5.08" y1="-2.54" x2="5.08" y2="5.08" width="0.254" layer="94"/>
-<wire x1="5.08" y1="5.08" x2="-2.54" y2="5.08" width="0.254" layer="94"/>
-<pin name="1" x="-5.08" y="2.54" visible="pin" length="middle" direction="pas"/>
-<pin name="2" x="-5.08" y="0" visible="pin" length="middle" direction="pas"/>
-<text x="-2.54" y="-5.08" size="1.27" layer="96">&gt;VALUE</text>
-<text x="-2.54" y="7.62" size="1.27" layer="95">&gt;NAME</text>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="TERMBLOCK_1X2" prefix="X" uservalue="yes">
-<description>3.5mm Terminal block
-&lt;p&gt;http://www.ladyada.net/library/pcb/eaglelibrary.html&lt;p&gt;</description>
-<gates>
-<gate name="G$1" symbol="1X2" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="TERMBLOCK_1X2-3.5MM">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="GeekAmmo">
 <description>&lt;h3&gt;GeekAmmo  Library&lt;/h3&gt;
 
@@ -3604,6 +3544,52 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 </deviceset>
 </devicesets>
 </library>
+<library name="screwterms">
+<packages>
+<package name="SCREW_TERM-200MIL-2">
+<wire x1="-5.08" y1="3.81" x2="5.08" y2="3.81" width="0.127" layer="21"/>
+<wire x1="5.08" y1="3.81" x2="5.08" y2="-3.81" width="0.127" layer="21"/>
+<wire x1="5.08" y1="-3.81" x2="-5.08" y2="-3.81" width="0.127" layer="21"/>
+<wire x1="-5.08" y1="-3.81" x2="-5.08" y2="3.81" width="0.127" layer="21"/>
+<pad name="P$1" x="2.54" y="0" drill="1.1"/>
+<pad name="P$2" x="-2.54" y="0" drill="1.1"/>
+<wire x1="-5.08" y1="3.81" x2="-5.08" y2="5.588" width="0.127" layer="21"/>
+<wire x1="-5.08" y1="5.588" x2="5.08" y2="5.588" width="0.127" layer="21"/>
+<wire x1="5.08" y1="5.588" x2="5.08" y2="3.81" width="0.127" layer="21"/>
+<text x="-3.5" y="4" size="1.27" layer="25">&gt;NAME</text>
+</package>
+</packages>
+<symbols>
+<symbol name="TERM-2">
+<pin name="1" x="7.62" y="-2.54" length="middle" rot="R180"/>
+<pin name="2" x="7.62" y="2.54" length="middle" rot="R180"/>
+<wire x1="2.54" y1="-5.08" x2="2.54" y2="5.08" width="0.254" layer="94"/>
+<wire x1="2.54" y1="5.08" x2="-2.54" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="5.08" x2="-2.54" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-5.08" x2="2.54" y2="-5.08" width="0.254" layer="94"/>
+<text x="-3.81" y="6.35" size="1.778" layer="95">&gt;NAME</text>
+<text x="-3.556" y="-7.112" size="1.27" layer="96">&gt;VALUE</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="SCREWTERM-2" prefix="JP">
+<gates>
+<gate name="G$1" symbol="TERM-2" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SCREW_TERM-200MIL-2">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -3617,47 +3603,43 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <part name="U$1" library="adafruit" deviceset="ARDUINO" device="UNO"/>
 <part name="U$8" library="GeekAmmo" deviceset="FRAME2-A4" device=""/>
 <part name="U$9" library="GeekAmmo" deviceset="DOCFIELD1" device=""/>
-<part name="JP1" library="microbuilder" deviceset="TERMBLOCK_1X2" device="" value="Motor 1-A"/>
+<part name="JP1" library="screwterms" deviceset="SCREWTERM-2" device="" value="Motor 1-A"/>
 <part name="U1" library="Custom" deviceset="A4988_STEP_STICK" device=""/>
 <part name="U2" library="Custom" deviceset="A4988_STEP_STICK" device=""/>
-<part name="JP2" library="microbuilder" deviceset="TERMBLOCK_1X2" device="" value="Motor 1-B"/>
-<part name="JP3" library="microbuilder" deviceset="TERMBLOCK_1X2" device="" value="Motor 2-A"/>
-<part name="JP4" library="microbuilder" deviceset="TERMBLOCK_1X2" device="" value="Motor 2-B"/>
-<part name="JP5" library="microbuilder" deviceset="TERMBLOCK_1X2" device="" value="Motor Power"/>
+<part name="JP2" library="screwterms" deviceset="SCREWTERM-2" device="" value="Motor 1-B"/>
+<part name="JP3" library="screwterms" deviceset="SCREWTERM-2" device="" value="Motor 2-A"/>
+<part name="JP4" library="screwterms" deviceset="SCREWTERM-2" device="" value="Motor 2-B"/>
+<part name="JP5" library="screwterms" deviceset="SCREWTERM-2" device="" value="Motor Power"/>
 <part name="C1" library="SparkFun-Passives" deviceset="CAP_POL" device="PTH2"/>
 <part name="R1" library="SparkFun-Passives" deviceset="RESISTOR" device="PTH-1/4W" value="10k"/>
 <part name="R2" library="SparkFun-Passives" deviceset="RESISTOR" device="PTH-1/4W" value="10k"/>
 <part name="SJ1" library="jumper" deviceset="SJ" device=""/>
 <part name="SJ2" library="jumper" deviceset="SJ" device=""/>
 <part name="U3" library="adafruit" deviceset="PINHD-1X10" device="" value="XBee Connector"/>
+<part name="JP6" library="screwterms" deviceset="SCREWTERM-2" device="" value="5V OUT"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
-<text x="7.62" y="177.8" size="1.778" layer="97">J-Type Range = -180°C to 750°C</text>
-<text x="7.62" y="175.26" size="1.778" layer="97">K-Type Range = -180°C to 1200°C</text>
-<text x="7.62" y="170.18" size="1.778" layer="97">With a Single 5V Supply:</text>
-<text x="7.62" y="160.02" size="1.778" layer="97">1.24V REF = -248°C to 752°C</text>
-<text x="7.62" y="162.56" size="1.778" layer="97">0.9V REF = -180°C to 820°C</text>
-<text x="7.62" y="165.1" size="1.778" layer="97">0V REF = 0°C to 1000°C</text>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="50.8" y="48.26" rot="R270"/>
 <instance part="U$8" gate="G$1" x="0" y="0"/>
 <instance part="U$9" gate="G$1" x="191.77" y="24.13"/>
-<instance part="JP1" gate="G$1" x="99.06" y="43.18" rot="R180"/>
+<instance part="JP1" gate="G$1" x="99.06" y="43.18"/>
 <instance part="U1" gate="G$1" x="73.66" y="129.54" smashed="yes"/>
 <instance part="U2" gate="G$1" x="185.42" y="129.54"/>
-<instance part="JP2" gate="G$1" x="124.46" y="43.18" rot="R180"/>
-<instance part="JP3" gate="G$1" x="99.06" y="20.32" rot="R180"/>
-<instance part="JP4" gate="G$1" x="124.46" y="20.32" rot="R180"/>
-<instance part="JP5" gate="G$1" x="121.92" y="58.42"/>
+<instance part="JP2" gate="G$1" x="124.46" y="43.18"/>
+<instance part="JP3" gate="G$1" x="99.06" y="20.32"/>
+<instance part="JP4" gate="G$1" x="124.46" y="20.32"/>
+<instance part="JP5" gate="G$1" x="132.08" y="58.42" rot="MR0"/>
 <instance part="C1" gate="G$1" x="101.6" y="60.96"/>
 <instance part="R1" gate="G$1" x="35.56" y="121.92"/>
 <instance part="R2" gate="G$1" x="142.24" y="121.92"/>
 <instance part="SJ1" gate="1" x="35.56" y="111.76"/>
 <instance part="SJ2" gate="1" x="142.24" y="111.76"/>
 <instance part="U3" gate="G$1" x="162.56" y="78.74"/>
+<instance part="JP6" gate="G$1" x="93.98" y="81.28"/>
 </instances>
 <busses>
 </busses>
@@ -3669,13 +3651,13 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <label x="81.28" y="55.88" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="JP5" gate="G$1" pin="2"/>
-<wire x1="116.84" y1="58.42" x2="109.22" y2="58.42" width="0.1524" layer="91"/>
-<label x="111.76" y="58.42" size="1.778" layer="95"/>
+<pinref part="JP5" gate="G$1" pin="1"/>
+<wire x1="124.46" y1="55.88" x2="109.22" y2="55.88" width="0.1524" layer="91"/>
+<label x="116.84" y="55.88" size="1.778" layer="95" rot="MR0"/>
 <pinref part="C1" gate="G$1" pin="-"/>
 <wire x1="101.6" y1="55.88" x2="101.6" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="101.6" y1="53.34" x2="109.22" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="53.34" x2="109.22" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="53.34" x2="109.22" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="GND1"/>
@@ -3732,6 +3714,11 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <wire x1="160.02" y1="81.28" x2="147.32" y2="81.28" width="0.1524" layer="91"/>
 <label x="147.32" y="81.28" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="JP6" gate="G$1" pin="1"/>
+<wire x1="101.6" y1="78.74" x2="109.22" y2="78.74" width="0.1524" layer="91"/>
+<label x="106.68" y="78.74" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="2-B2" class="0">
 <segment>
@@ -3740,9 +3727,9 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <label x="205.74" y="137.16" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="JP4" gate="G$1" pin="2"/>
-<wire x1="129.54" y1="20.32" x2="137.16" y2="20.32" width="0.1524" layer="91"/>
-<label x="134.62" y="20.32" size="1.778" layer="95"/>
+<pinref part="JP4" gate="G$1" pin="1"/>
+<wire x1="132.08" y1="17.78" x2="137.16" y2="17.78" width="0.1524" layer="91"/>
+<label x="134.62" y="17.78" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="2-B1" class="0">
@@ -3752,9 +3739,9 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <label x="205.74" y="132.08" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="JP4" gate="G$1" pin="1"/>
-<wire x1="129.54" y1="17.78" x2="137.16" y2="17.78" width="0.1524" layer="91"/>
-<label x="134.62" y="17.78" size="1.778" layer="95"/>
+<pinref part="JP4" gate="G$1" pin="2"/>
+<wire x1="132.08" y1="22.86" x2="137.16" y2="22.86" width="0.1524" layer="91"/>
+<label x="134.62" y="22.86" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="2-A1" class="0">
@@ -3764,9 +3751,9 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <label x="205.74" y="127" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="JP3" gate="G$1" pin="1"/>
-<wire x1="104.14" y1="17.78" x2="111.76" y2="17.78" width="0.1524" layer="91"/>
-<label x="109.22" y="17.78" size="1.778" layer="95"/>
+<pinref part="JP3" gate="G$1" pin="2"/>
+<wire x1="106.68" y1="22.86" x2="111.76" y2="22.86" width="0.1524" layer="91"/>
+<label x="109.22" y="22.86" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="2-A2" class="0">
@@ -3776,9 +3763,9 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <label x="205.74" y="121.92" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="JP3" gate="G$1" pin="2"/>
-<wire x1="104.14" y1="20.32" x2="111.76" y2="20.32" width="0.1524" layer="91"/>
-<label x="109.22" y="20.32" size="1.778" layer="95"/>
+<pinref part="JP3" gate="G$1" pin="1"/>
+<wire x1="106.68" y1="17.78" x2="111.76" y2="17.78" width="0.1524" layer="91"/>
+<label x="109.22" y="17.78" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="+5V" class="0">
@@ -3811,6 +3798,21 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <pinref part="U3" gate="G$1" pin="6"/>
 <wire x1="160.02" y1="76.2" x2="147.32" y2="76.2" width="0.1524" layer="91"/>
 <label x="147.32" y="76.2" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U2" gate="G$1" pin="RES"/>
+<wire x1="170.18" y1="127" x2="162.56" y2="127" width="0.1524" layer="91"/>
+<label x="160.02" y="127" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="RES"/>
+<wire x1="58.42" y1="127" x2="50.8" y2="127" width="0.1524" layer="91"/>
+<label x="48.26" y="127" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="JP6" gate="G$1" pin="2"/>
+<wire x1="101.6" y1="83.82" x2="109.22" y2="83.82" width="0.1524" layer="91"/>
+<label x="106.68" y="83.82" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="2-MS1" class="0">
@@ -3847,13 +3849,6 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <pinref part="U$1" gate="G$1" pin="D13"/>
 <wire x1="78.74" y1="53.34" x2="86.36" y2="53.34" width="0.1524" layer="91"/>
 <label x="81.28" y="53.34" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="2-RES" class="0">
-<segment>
-<pinref part="U2" gate="G$1" pin="RES"/>
-<wire x1="170.18" y1="127" x2="162.56" y2="127" width="0.1524" layer="91"/>
-<label x="160.02" y="127" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="2-SLP" class="0">
@@ -3899,9 +3894,9 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <label x="93.98" y="121.92" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="G$1" pin="2"/>
-<wire x1="104.14" y1="43.18" x2="111.76" y2="43.18" width="0.1524" layer="91"/>
-<label x="109.22" y="43.18" size="1.778" layer="95"/>
+<pinref part="JP1" gate="G$1" pin="1"/>
+<wire x1="106.68" y1="40.64" x2="111.76" y2="40.64" width="0.1524" layer="91"/>
+<label x="109.22" y="40.64" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="1-A1" class="0">
@@ -3911,9 +3906,9 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <label x="93.98" y="127" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="G$1" pin="1"/>
-<wire x1="104.14" y1="40.64" x2="111.76" y2="40.64" width="0.1524" layer="91"/>
-<label x="109.22" y="40.64" size="1.778" layer="95"/>
+<pinref part="JP1" gate="G$1" pin="2"/>
+<wire x1="106.68" y1="45.72" x2="111.76" y2="45.72" width="0.1524" layer="91"/>
+<label x="109.22" y="45.72" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="1-B1" class="0">
@@ -3923,9 +3918,9 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <label x="93.98" y="132.08" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="JP2" gate="G$1" pin="1"/>
-<wire x1="129.54" y1="40.64" x2="137.16" y2="40.64" width="0.1524" layer="91"/>
-<label x="134.62" y="40.64" size="1.778" layer="95"/>
+<pinref part="JP2" gate="G$1" pin="2"/>
+<wire x1="132.08" y1="45.72" x2="137.16" y2="45.72" width="0.1524" layer="91"/>
+<label x="134.62" y="45.72" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="1-B2" class="0">
@@ -3935,9 +3930,9 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <label x="93.98" y="137.16" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="JP2" gate="G$1" pin="2"/>
-<wire x1="129.54" y1="43.18" x2="137.16" y2="43.18" width="0.1524" layer="91"/>
-<label x="134.62" y="43.18" size="1.778" layer="95"/>
+<pinref part="JP2" gate="G$1" pin="1"/>
+<wire x1="132.08" y1="40.64" x2="137.16" y2="40.64" width="0.1524" layer="91"/>
+<label x="134.62" y="40.64" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="1-MS1" class="0">
@@ -3974,13 +3969,6 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <pinref part="U$1" gate="G$1" pin="D4"/>
 <wire x1="78.74" y1="27.94" x2="86.36" y2="27.94" width="0.1524" layer="91"/>
 <label x="81.28" y="27.94" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="1-RES" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="RES"/>
-<wire x1="58.42" y1="127" x2="50.8" y2="127" width="0.1524" layer="91"/>
-<label x="48.26" y="127" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="1-SLP" class="0">
@@ -4021,8 +4009,8 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 </net>
 <net name="+12V" class="0">
 <segment>
-<pinref part="JP5" gate="G$1" pin="1"/>
-<wire x1="116.84" y1="60.96" x2="109.22" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="JP5" gate="G$1" pin="2"/>
+<wire x1="124.46" y1="60.96" x2="109.22" y2="60.96" width="0.1524" layer="91"/>
 <label x="111.76" y="60.96" size="1.778" layer="95"/>
 <wire x1="109.22" y1="60.96" x2="109.22" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="109.22" y1="66.04" x2="101.6" y2="66.04" width="0.1524" layer="91"/>
